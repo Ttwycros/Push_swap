@@ -1,5 +1,7 @@
 # Prerequisites
 *.d
+.DS_Store
+workspace.code-workspace
 
 # Object files
 *.o
