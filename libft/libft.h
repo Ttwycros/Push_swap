@@ -6,7 +6,7 @@
 /*   By: ttwycros <ttwycros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 19:00:03 by ttwycros          #+#    #+#             */
-/*   Updated: 2022/03/05 18:53:08 by ttwycros         ###   ########.fr       */
+/*   Updated: 2022/03/14 19:15:22 by ttwycros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 typedef struct s_list {
 	int				content;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 
