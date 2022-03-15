@@ -6,7 +6,7 @@
 /*   By: ttwycros <ttwycros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 18:14:29 by ttwycros          #+#    #+#             */
-/*   Updated: 2022/03/15 19:33:52 by ttwycros         ###   ########.fr       */
+/*   Updated: 2022/03/15 20:24:36 by ttwycros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +36,8 @@ int	main(int argc, char	**argv)
 		size_45(&lst_a, &lst_b);
 	else if (list_size <= 100)
 		big_sort(&lst_a, &lst_b, 15);
-	else if (list_size <= 500)
+	else
 		big_sort(&lst_a, &lst_b, 30);
 	ft_lstclear(&lst_a, delete_content);
 	return (0);
 }
-
-/*
-void	list_print(t_list	*lst)
-{
-	if (!lst)
-	{
-		printf("None \n");
-	}
-	while (lst)
-	{
-		printf("content	%3d index	%d\n", lst->content, lst->index);
-		lst = lst->next;
-	}
-}
-*/
