@@ -5,6 +5,7 @@ workspace.code-workspace
 push_swap_tester/
 push_swap_run_args.log
 checker
+push_swap
 
 # Object files
 *.o
