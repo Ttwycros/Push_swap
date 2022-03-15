@@ -2,14 +2,19 @@ NAME =	push_swap
 
 CC =	gcc
 #CFLAGS =	-g -Wall -Wextra -Werror -MMD
-CFLAGS =	-fsanitize=address
+CFLAGS =	##-fsanitize=address
 
 RM =	rm -rf
 
-SRC =   push_swap.c		\
-		main.c			\
+SRC =  	main.c			\
 		utils.c			\
 		init_and_check.c \
+		push_utils_push.c \
+		push_utils_rotate.c \
+		push_utils_swap.c \
+		big_sort.c \
+		small_sort.c \
+		index.c \
 
 INC = 	-I push_swap.h		\
 		-I libft/libft.h 	\

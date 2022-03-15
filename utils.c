@@ -6,7 +6,7 @@
 /*   By: ttwycros <ttwycros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 16:05:28 by ttwycros          #+#    #+#             */
-/*   Updated: 2022/03/05 19:00:29 by ttwycros         ###   ########.fr       */
+/*   Updated: 2022/03/15 19:34:33 by ttwycros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	sorted(t_list	*lst)
 {
 	t_list	*tmp;
 
-	if (!lst || !lst->next)
+	if (!lst)
 		return (0);
 	tmp = lst;
 	while (tmp->next)

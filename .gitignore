@@ -2,6 +2,9 @@
 *.d
 .DS_Store
 workspace.code-workspace
+push_swap_tester/
+push_swap_run_args.log
+checker
 
 # Object files
 *.o
