@@ -30,7 +30,34 @@ void	check_dup(t_list	*lst)
 	}
 }
 
-static int	check_str(char	*str)
+void	ft_funk(const char *number)
+{
+	char			*str;
+	long long int	i;
+	int				flag;
+
+	flag = 0;
+	str = (char *) number;
+	i = 0;
+	while (str + i && (*(str + i) == '\n' || *(str + i) == '\t'
+			|| *(str + i) == '\v' || *(str + i) == '\f' || *(str + i) == '\r'
+			|| *(str + i) == ' '))
+		i++;
+	if (*(str + i) == '-' || *(str + i) == '+')
+		i++;
+	while (*(str + i) >= '0' && *(str + i) <= '9')
+	{
+		flag++;
+		i++;
+	}
+	if (str[i])
+		error_message("Some arguments aren't integers");
+	else
+		if (flag == 0)
+			error_message("Some arguments aren't integers");
+}
+
+int	check_str(char *str)
 {
 	long long int	i;
 	long long int	temp;
@@ -38,15 +65,10 @@ static int	check_str(char	*str)
 	i = 0;
 	if (!*str)
 		error_message("No string");
-	while (str[i])
-	{
-		if (!ft_isdigit(*(str + i)) && *(str + i) != '-')
-			error_message("False input (non digit/minus)");
-		i++;
-	}
+	ft_funk(str);
 	temp = ft_atoi_long(str);
 	if (temp < INT_MIN || temp > INT_MAX)
-		error_message("False input (int max/min)");
+		error_message("Some arguments are bigger than an integer");
 	return (temp);
 }
 
